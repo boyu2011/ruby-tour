@@ -1,1 +1,1 @@
-p `ls`
+100.times { |x| puts x }

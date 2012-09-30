@@ -44,9 +44,14 @@
 			});
 			
 			$(document).ready(function(){
+                
                 $("#run_code_btn").click(function() {
                     var text = editor.getValue();
                     socket.emit('execute_code', text);
+                });
+                
+                $("#clear_code_btn").click(function() {
+                    editor.setValue('');
                 });
 			});
             
@@ -63,17 +68,19 @@
                     
                     <button class="btn btn-large btn-primary" id="run_code_btn">
                         Run
-                    </button><br /><br />
+                    </button>
+                    &nbsp;
+                    <button class="btn btn-large btn-primary" id="clear_code_btn">
+                        Clear
+                    </button>
                     
-                    <textarea id="output" rows="10" style="width:100%;padding:0;margin:0;background:GAINSBORO;border:1"></textarea><br />
+                    <br /><br />
+                    
+                    <textarea id="output" rows="10" style="width:100%;padding:0;margin:0;background:GAINSBORO;border:1;overflow-y:scroll;overflow:scroll;"></textarea><br />
                 </div>
                 <div class="span6">
                     <label class="text-info">Ruby Quick Tutorial</label>
-                    <!--
-                    <textarea id="tutorial" rows="29" style="width:100%;padding:0;margin:0;background:white;border:1">
-                    </textarea>
-                    -->
-                    
+                    <p>Take a tour with following steps, to discover the most interesting features of Ruby.</p> 
                     <ol>
                         <li>Hello World</li>
                             <p>p 'Hello World'</p>
