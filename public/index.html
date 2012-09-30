@@ -52,31 +52,71 @@
             
 		</script>
         <div class="container">
-            <h1>Ruby Tour</h1>
+            <h1><img src="ruby_icon.jpeg" height="42" width="42" alt="">&nbsp;&nbsp;Ruby Tour</h1>
+            <p class="lead">Easy way to learn to code with Ruby</p>
+            <hr>
             <div class="row">
                 <div class="span6">
-                    <h4>Code Editor</h4>
+                    <label class="text-info">Code Editor</label>
 
-                    <textarea id="editor" rows="10"
-                        style="width:100%;padding:0;margin:0;background:white;border:1">
-                    </textarea><br />
+                    <textarea id="editor" rows="10" style="width:100%;padding:0;margin:0;background:white;border:1"></textarea><br />
                     
                     <button class="btn btn-large btn-primary" id="run_code_btn">
                         Run
                     </button><br /><br />
                     
-                    <textarea id="output" rows="10"
-                        style="width:100%;padding:0;margin:0;background:GAINSBORO;border:1">
-                    </textarea><br />
+                    <textarea id="output" rows="10" style="width:100%;padding:0;margin:0;background:GAINSBORO;border:1"></textarea><br />
                 </div>
                 <div class="span6">
-                    <h4>Ruby Quick Tutorial</h4>
-                    
-                    <textarea id="tutorial" rows="29" 
-                        style="width:100%;padding:0;margin:0;background:white;border:1">
+                    <label class="text-info">Ruby Quick Tutorial</label>
+                    <!--
+                    <textarea id="tutorial" rows="29" style="width:100%;padding:0;margin:0;background:white;border:1">
                     </textarea>
+                    -->
+                    
+                    <ol>
+                        <li>Hello World</li>
+                            <p>p 'Hello World'</p>
+                        <li>Ruby Is Object-Oriented</li>
+                            <p>p 1.class</p>
+                            <p>p 0.0.class</p>
+                            <p>p true.class</p>
+                        <li>Blocks and Iterators</li>
+                            <p>3.times { print "Ruby! " }</p>
+                            <p>1.upto(9) { |x| print x }</p>
+                        <li>Expressions and Operators in Ruby</li>
+                            <p>x = 22</p>
+                            <p>y = 33</p>
+                            <p>p minimum = if x < y then x else y end</p>
+                        <li>Methods</li>
+                            <p>def square(x)</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;x*x</p>
+                            <p>end</p>
+                            <p>x = square(9)</p>
+                            <p>p x</p>
+                        <li>Classes</li>
+                            <p>class Point</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;def initialize( x, y )</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@x, @y = x, y</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;end</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;def to_s</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"(#@x, #@y)"</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;end</p>
+                            <p>end</p>
+                            <p>point = Point.new(2,4)</p>
+                            <p>p point</p>
+                    </ol>
                 </div>
             </div>
+
+            <footer class="footer">
+                <hr>
+                <small>
+                    <a href="http://github.com/boyu2011">Developed by Bo Yu</a>
+                </small>
+                <br />
+                <br />
+            </footer>
         </div>
 	</body>
 </html>
